@@ -13,7 +13,11 @@ function exe01(){
         5 - Mostrar o numero do vendedor que mais vendeu em determinado mes
         6 - Mostrar o número do mes com mais vendas
         7 - Finalizar o programa*/ 
+<<<<<<< HEAD
     let i, opcao,x, cod, mes,soma,maior, maiorNome, melhorMes, total,maiorMes,s;
+=======
+    let i, opcao,x, cod, mes,soma,maior, maiorNome, melhorMes, total,maiorMes;
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
     let vendedor = [], vendas = []
     let data = new Date;
     let objeto = {}
@@ -21,18 +25,31 @@ function exe01(){
     for(i = 0;i < 4;i++){
         objeto = {}
         objeto.nome = prompt("Nome do vendedor: ");
+<<<<<<< HEAD
         objeto.codigo = Number(prompt("Codigo de "+objeto.nome+": "));
+=======
+        objeto.codigo = Number(prompt("Codigo do "+objeto.nome+": "));
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
         alert("Já se passaram "+meses+" meses desde o começo do ano, necessario cadastrar vendas dos meses anteriores")
         vendas = [] // inicia-se vetor de vendas para a vendedor em especifico
         for(x = 1; x <= meses; x++){
             vendas.push(Number(prompt("Valor vendido por "+objeto.nome+" no mes "+x+": R$")))//alimenta o vetor de vendas
         }
+<<<<<<< HEAD
         objeto.valor = vendas//torna o vetor um metodo do objeto
         vendedor.push(objeto) //insere no vetor
     }
     alert("Os quatro vendedores da loja foram cadastrados com sucesso! Ao contratar novos funcionarios, cadastre-os pelo menu...")
     alert("Menu de escolhas:"+
     "\n1- Cadastrar vendedor"+
+=======
+        objeto.valor = vendas //torna o vetor um metodo do objeto
+        vendedor.push(objeto) //insere no vetor 
+    }
+    alert("Os quatro vendedores da loja foram cadastrados com sucesso! Ao contratar novos funcionarios, cadastre-os pelo menu...")
+    alert("Menu de escolhas:"+
+    "1- Cadastrar vendedor"+
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
     "\n2- Cadastrar venda"+
     "\n3 - Consultar o total das vendas de um funcionario em um determinado mês"+
     "\n4- Consultar o total das vendas de determinado vendedor"+
@@ -45,7 +62,11 @@ function exe01(){
             case 1: //Insere novo vendedor -- Mesmo procedimento que os quatro primeiros
                 objeto = {}
                 objeto.nome = prompt("Nome do vendedor: ");
+<<<<<<< HEAD
                 objeto.codigo = Number(prompt("Codigo de "+objeto.nome+": "));
+=======
+                objeto.codigo = Number(prompt("Codigo do "+objeto.nome+": "));
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
                 alert("Já se passaram "+meses+" meses desde o começo do ano, necessario cadastrar vendas dos meses anteriores")
                 vendas = []
                 for(x = 1; x <= meses; x++){
@@ -54,6 +75,7 @@ function exe01(){
                 objeto.valor = vendas
                 vendedor.push(objeto)
                 break;
+<<<<<<< HEAD
             case 2: //Modifica venda
                 cod = Number(prompt("Codigo do vendedor: "))
                 mes = Number(prompt("Mês desejado: ")) //janeiro = 0
@@ -62,6 +84,14 @@ function exe01(){
                     if(cod == vendedor[i].codigo){
                         vendedor[i].valor[mes] = Number(prompt("Valor da venda: ")) //meses +1 para ficar no mes certo
                         alert("Total do mes "+(mes+1)+" alterado com sucesso!")
+=======
+            case 2: //Insere venda no mes atual
+                cod = Number(prompt("Codigo do vendedor: "))
+                for(i = 0; i < vendedor.length; i++){
+                    if(cod == vendedor[i].codigo){
+                        vendedor[i].valor[mes+1] = Number(prompt("Valor da venda: ")) //meses +1 para ficar no mes certo
+                        alert("Venda inserida com sucesso!")
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
                     }
                 }
                 break;
@@ -78,6 +108,7 @@ function exe01(){
                 break;
             case 4:
                 soma = 0
+<<<<<<< HEAD
                 cod = Number(prompt("Codigo do vendedor: "))
                 for(i = 0; i < vendedor.length; i++){
                     if(cod == vendedor[i].codigo){
@@ -86,6 +117,16 @@ function exe01(){
                             soma = soma + Number(s)
                         }
                         alert("O valor total das vendas de "+vendedor[i].nome+" é de R$"+soma)
+=======
+                cod = Number(prompt("Codigo do funcionario: "))
+                meses = data.getMonth()
+                for(i = 0;i < vendedor.length; i++){
+                    if(cod == vendedor[i].codigo){
+                        for(x = 0; x <= (meses+1); x++){//colocado o +1 pois pode ter inserido vendas no mes atual
+                            soma = soma + vendedor[i].valor[x]
+                        }
+                        alert("O total das vendas de "+vendedor[i].nome+" é de R$"+soma.toFixed(2))
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
                     }
                 }
                 break;
@@ -128,7 +169,11 @@ function exe01(){
         "\n1- Cadastrar vendedor"+
         "\n2- Cadastrar venda"+
         "\n3 - Consultar o total das vendas de um funcionario em um determinado mês"+
+<<<<<<< HEAD
         "\n4 - Consultar o total das vendas de determinado vendedor"+
+=======
+        "\n4- Consultar o total das vendas de determinado vendedor"+
+>>>>>>> 27729099b65f28a53964f19274f451c76a722500
         "\n5 - Mostrar o numero do vendedor que mais vendeu em determinado mes"+
         "\n6 - Mostrar o número do mes com mais vendas"+
         "\n7 - Finalizar o programa")

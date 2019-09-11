@@ -10,9 +10,7 @@ function vet1(){
     "\n6 - Mostrar o número do mes com mais vendas"+
     "\n7 - Finalizar o programa"+
     "\nOpção: ")
-    var opção;
     var vendas = [],vendedores = []
-    var objeto = {}
     do{
         opcao = Number(prompt(mensagem))
         switch(opcao){
