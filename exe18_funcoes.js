@@ -5,13 +5,9 @@ function primos() {
     while(vet.length < 10){
         let div = []
         for(let i = 1; i <= n; i++){
-            if(n % i == 0){
-                div.push(i)
-            }
+            n % i == 0 ? div.push(i) : false;
         }
-        if(div.length == 2){
-            vet.push(n)
-        }
+        div.length == 2 ? vet.push(n) : false;
         n++; 
     }
     return vet

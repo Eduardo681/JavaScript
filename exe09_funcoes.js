@@ -2,9 +2,7 @@
 function somaDivisores(n){  //inclui 1 e ele mesmo
     let soma = 0
     for(let i = 1; i <= n; i++){
-        if(n % i == 0){
-            soma += i;
-        }
+        n % i == 0 ? soma += i : false;
     }
     return soma;
 }

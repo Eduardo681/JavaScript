@@ -1,11 +1,9 @@
 //Funcao que reccebe um vetor e retorna a quantidade de pares
 function pares(vetor){
     let qtd = 0
-    for(let i = 0; i < vetor.length;i++){
-        if(vetor[i]% 2 == 0){
-            qtd++
-        }
-    }
+    vetor.forEach(item => {
+        item % 2 == 0 ? qtd++ : false;
+    });
     return qtd;
 }
 let v = [1,2,3,4,5,6,7,8,9,10]

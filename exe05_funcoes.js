@@ -1,13 +1,5 @@
 /*Faça uma funcao que verifique se um inteiro é positivo ou negativo*/
 function posNeg(n){
-    if(n == 0){
-        return 'igual a zero'
-    } else {
-        if(n > 0){
-            return 'positivo'
-        } else {
-            return 'negativo'
-        }
-    } 
+    return n == 0 ? 'igual a zero' : n > 0 ? 'positivo' : 'negativo'
 }
-console.log(`O numero é ${posNeg(-554)}.`)
+console.log(`O numero é ${posNeg(0)}.`)

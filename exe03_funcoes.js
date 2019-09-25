@@ -4,13 +4,11 @@ function confereIgual(x, y) {
     return 0;
   } else {
     for (var i = 0; i < x.length; i++) {
-      if (x[i] === y[i]) {
-        continue;
-      } else {
+      if (x[i] != y[i]) {
         break;
       }
     }
-    return i;
+    return i+1;
   }
 }
 console.log(confereIgual("teste", "teste"));
