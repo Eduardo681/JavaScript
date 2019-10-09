@@ -36,7 +36,7 @@ function situacao(matriz,vetor){
             soma += matriz[linha][coluna];
         }
         var media = soma/5
-        media >= 6 ? situacao = 'aprovado' : situacao = 'reprovado';
+        media >= 6 ? situacao = 'aprovado' : media >= 3 ? situacao = 'exame': situacao = 'reprovado';
         alert(`${vetor[linha]}, teve média de ${media}, portanto esta ${situacao}.`)
     }
 }
